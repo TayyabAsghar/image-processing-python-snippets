@@ -20,6 +20,8 @@ hsv = HSV_Cal().Image(image_name)
 
 # For Video or Camera.
 hsv = HSV_Cal().VideoCapture(video_name)
+
+# Press [esc] key to close the window and return the values.
 ```
 
 ```py
