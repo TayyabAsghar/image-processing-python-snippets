@@ -43,6 +43,11 @@ class HSV_Cal:
         self.vMax = cv.getTrackbarPos("VMax", windowName)
 
     def Image(self, filename, flags=cv.IMREAD_COLOR, printVal=True):
+        '''
+        filename - Name / Path of Image.
+        flags    - All cv2.imread() flags are applicable here.
+        printVal - Print HSV values on the terminal.
+        '''
 
         # Load image
         image = cv.imread(filename, flags)
@@ -96,9 +101,13 @@ class HSV_Cal:
 
         return lower, upper
 
-    def VideoCapture(self, video, printVal=True):
+    def VideoCapture(self, filename, printVal=True):
+        '''
+        filename - Name / Path of Video or Camera number.
+        printVal - Print HSV values on the terminal.
+        '''
 
-        cap = cv.VideoCapture(video)
+        cap = cv.VideoCapture(filename)
 
         self.__createTrackbarWindow__("video")
 
