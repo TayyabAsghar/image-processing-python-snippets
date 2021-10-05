@@ -1,2 +1,10 @@
-# python-snippets
-A useful small classes of python code for ML projects that i use in my projects.
+# Image Processing Python Snippets
+
+This repo contains the Classes and Functions that help in image processing.
+
+## 👌 Snippets
+
+Following snippets have been implemented. Read there `README.md` files for their Usage Guide.
+
+- ### HSV
+  For calculating the HSV value for color detection in real time.
