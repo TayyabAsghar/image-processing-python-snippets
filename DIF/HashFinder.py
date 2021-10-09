@@ -16,8 +16,8 @@ Outputs the number of found duplicate/similar image pairs.
 class HashFinder:
     def __init__(self, directory, hash_size=8):
         """
-        directory (str).........folder to search for duplicate images
-        hash_size (int).........sizeof our hash
+        directory - Directory to search for duplicate images.
+        hash_size - Size of our hash.
         """
         assert (
             Path(directory).exists() == True
@@ -30,8 +30,8 @@ class HashFinder:
 
     def duplicate(self, remove=False):
         """
-        remove (bool)...........True = remove the duplicature files
-                                False = only print the duplicate files
+        remove - True = remove the duplicature files
+                 False = only print the duplicate files
         """
 
         hashes = {}
@@ -83,8 +83,8 @@ class HashFinder:
 
     def similar(self, image, similarity=80):
         """
-        image (str).............image path for similar image
-        similarity (int)........to what percent images should be similar
+        image      - Image path for similar image
+        similarity - To what percent images should be similar
         """
 
         assert Path(image).exists() == True, f'{Text.ERROR} "{image}" does\'t exist.'

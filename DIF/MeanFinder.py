@@ -22,18 +22,18 @@ def MeanFinder(
     rotate_check=True,
 ):
     """
-    directory (str).........folder to search for duplicate/similar images
-    show_imgs (bool)........True = shows the duplicate/similar images found in output
-                            False = doesn't show found images
-    similarity (str)........"high" = searches for duplicate images, more precise
-                            "low" = finds similar images
-    compression (int).......recommended not to change default value
-                            compression in px (height x width) of the images before being compared
-                            the higher the compression i.e. the higher the pixel size, the more computational ressources and time required
-    remove (bool)...........True = remove the duplicature files
+    directory    - Directory to search for duplicate/similar images
+    show_imgs    - True = shows the duplicate/similar images found in output
+                   False = doesn't show found images
+    similarity   - "high" = searches for duplicate images, more precise
+                   "low" = finds similar images
+    compression  - Recommended not to change default value
+                   compression in px (height x width) of the images before being compared
+                   the higher the compression i.e. the higher the pixel size, the more computational ressources and time required
+    remove       - True = remove the duplicature files
                             False = only print the duplicate files
-    rotate_check (bool).....True = rotate the file to check for comparision
-                            False = doesn't rotate the image
+    rotate_check - True = rotate the file to check for comparision
+                   False = doesn't rotate the image
     """
     assert (
         Path(directory).exists() == True
