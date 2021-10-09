@@ -24,8 +24,6 @@ sim_imgs = HashFinder(directory).similar(image, similarity=70)
 
 # For all the Duplicate images in a Directory.
 dup_imgs = MeanFinder(directory)
-
-# Press [esc] key to close the window and return the values.
 ```
 
 ```py
