@@ -9,4 +9,8 @@ Following snippets have been implemented. Read there `README.md` files for their
 - ### DIF
   For finding Duplicate/similar IImages.
 - ### HSV
+
   For calculating the HSV value for color detection in real time.
+
+- ### Stack-Images
+  For Stacking multiple images even in they are not of the same chanel.
