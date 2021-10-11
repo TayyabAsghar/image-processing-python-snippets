@@ -8,11 +8,6 @@ class HSV_Cal:
         self.hMin = self.sMin = self.vMin = self.hMax = self.sMax = self.vMax = 0
 
     def __createTrackbarWindow__(self, windowName):
-        def nothing2(x):
-            print(f"x ======= {x}")
-            # print(f"value ======= {y}")
-            pass
-
         def nothing(x):
             pass
 
@@ -21,7 +16,7 @@ class HSV_Cal:
 
         # Create trackbars for color change
         # Hue is from 0-179 for Opencv
-        cv.createTrackbar("HMin", windowName, 0, 179, nothing2)
+        cv.createTrackbar("HMin", windowName, 0, 179, nothing)
         cv.createTrackbar("SMin", windowName, 0, 255, nothing)
         cv.createTrackbar("VMin", windowName, 0, 255, nothing)
         cv.createTrackbar("HMax", windowName, 0, 179, nothing)
@@ -43,11 +38,11 @@ class HSV_Cal:
         self.vMax = cv.getTrackbarPos("VMax", windowName)
 
     def Image(self, filename, flags=cv.IMREAD_COLOR, printVal=True):
-        '''
+        """
         filename - Name / Path of Image.
         flags    - All cv2.imread() flags are applicable here.
         printVal - Print HSV values on the terminal.
-        '''
+        """
 
         # Load image
         image = cv.imread(filename, flags)
@@ -102,10 +97,10 @@ class HSV_Cal:
         return lower, upper
 
     def VideoCapture(self, filename, printVal=True):
-        '''
+        """
         filename - Name / Path of Video or Camera number.
         printVal - Print HSV values on the terminal.
-        '''
+        """
 
         cap = cv.VideoCapture(filename)
 
