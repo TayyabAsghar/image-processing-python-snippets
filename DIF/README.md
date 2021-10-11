@@ -14,7 +14,7 @@ This snippet is used find the Duplicate / Similar Images in a Directory. Their a
 from DIF import HashFinder
 
 # For Mean Square Error Method
-from DIF import HashFinder
+from DIF import MeanFinder
 
 # For all the Duplicate images in a Directory.
 dup_imgs = HashFinder(directory).duplicate()
